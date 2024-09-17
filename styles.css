@@ -1,0 +1,154 @@
+:root {
+    --side-menu-bg: #3E4046;
+    --side-menu-bg-hover: #303236;
+}
+
+.body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Future PT', sans-serif; 
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6%;
+    height: 100%;
+    background-color: var(--side-menu-bg);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 94%;
+    height: 100%;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    background-image: url("images/content_bg_1.png");
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.menu-hr {
+    width: 100%;
+    border: 2px;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.weapon-types-list-container {
+    width: 100%;
+}
+
+.weapon-types-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.weapon-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.weapon-type:hover {
+    background-color: var(--side-menu-bg-hover);
+}
+
+.change-gun-container {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 24px;
+}
+
+.button {
+    aspect-ratio: 1 / 1;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button__left {
+    background-image: url("images/arrow_left.png");
+}
+
+.button__right {
+    background-image: url("images/arrow_right.png");
+}
+
+.gun-container {
+    width: 100%;
+    height: 75%;
+    display: flex; 
+    justify-content: center;
+}
+
+.gun-container p {
+    margin: 0;
+    position: relative; 
+    z-index: 0;
+    font-size: 300px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bolder;
+}
+
+.gun-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    z-index: 1;
+}
+
+.gun-characteristics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.characteristics-header {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.gun-characteristics {
+    display: flex;
+    gap: 200px;
+}
+
+.gun-characteristics-group {
+    display: flex;
+    gap: 50px;
+}
+
+.gun-characteristics-values {
+    font-weight: bold;
+}
+
+.list-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

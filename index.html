@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Future+PT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weapon Site</title>
+</head>
+
+<body class="body">
+    <div class="side-panel">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <hr class="menu-hr">
+        <div class="weapon-types-list-container">
+            <ul class="weapon-types-list">
+                <li class="weapon-type" onclick="chooseSniperRifles()">
+                    <img src="images/sniper_rifle_menu.png" alt="sniper rifle">
+                </li>
+                <li class="weapon-type" onclick="chooseRifles()">
+                    <img src="images/rifle_menu.png" alt="rifle">
+                </li>
+                <li class="weapon-type" onclick="chooseSMG()">
+                    <img src="images/smg_menu.png" alt="smg">
+                </li>
+                <li class="weapon-type" onclick="choosePistols()">
+                    <img src="images/pistols_menu.png" alt="pistols">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="change-gun-container">
+            <button class="button button__left" id="prevGunBtn"></button>
+            <p class="gun-name" id="gunName">AK-47</p>
+            <button class="button button__right" id="nextGunBtn"></button>
+        </div>
+        <div class="gun-container">
+            <p class="gun-name" id="gunNameDisplay">AK-47</p>
+            <img src="images/ak_47.png" alt="gun photo" class="gun-image" id="gunPhoto">
+        </div>
+        <div class="gun-characteristics-container">
+            <h1 class="characteristics-header">Characteristics</h1>
+            <div class="gun-characteristics">
+                <div class="gun-characteristics-group">
+                    <div class="gun-characteristics-names">
+                        <ul class="list-col">
+                            <li>Length:</li>
+                            <li>Barrel length:</li>
+                        </ul>
+                    </div>
+                    <div class="gun-characteristics-values">
+                        <ul class="list-col">
+                            <li id="length">880 mm (35 in) - 645 mm (25.4 in)</li>
+                            <li id="barrelLength">415 mm (16.3 in)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gun-characteristics-group">
+                    <div class="gun-characteristics-names">
+                        <ul class="list-col">
+                            <li>Rate of fire:</li>
+                            <li>Effective firing range:</li>
+                        </ul>
+                    </div>
+                    <div class="gun-characteristics-values">
+                        <ul class="list-col">
+                            <li id="rateOfFire">600 RPM</li>
+                            <li id="effectiveRange">350 m (380 yd)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gun-characteristics-group">
+                    <div class="gun-characteristics-names">
+                        <ul class="list-col">
+                            <li>Mass:</li>
+                            <li>Cartridge:</li>
+                        </ul>
+                    </div>
+                    <div class="gun-characteristics-values">
+                        <ul class="list-col">
+                            <li id="mass">3.47 kg (7.7 lb)</li>
+                            <li id="caliber">7.62x39mm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
