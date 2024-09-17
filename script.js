@@ -137,45 +137,66 @@ let weaponType = rifles;
 
 function chooseSniperRifles() {
     weaponType = sniperRifles;
-    gunImageElement.style.width = '1500px'; 
     currentIndex = 0;
     updateGunDisplay();
+    setTimeout(() => {
+        gunImageElement.style.width = '1500px';
+    }, 500);
 }
 
 function chooseRifles() {
     weaponType = rifles; 
-    gunImageElement.style.width = '1200px';
     currentIndex = 0;
     updateGunDisplay(); 
+    setTimeout(() => {
+        gunImageElement.style.width = '1200px';
+    }, 500);
 }
 
 function chooseSMG() {
     weaponType = smg; 
-    gunImageElement.style.width = '900px';
     currentIndex = 0; 
     updateGunDisplay(); 
+    setTimeout(() => {
+        gunImageElement.style.width = '900px';
+    }, 500);
 }
 
 function choosePistols() {
     weaponType = pistols; 
-    gunImageElement.style.width = '600px';
     currentIndex = 0; 
     updateGunDisplay(); 
+    setTimeout(() => {
+        gunImageElement.style.width = '600px';
+    }, 500);
 }
 
-const updateGunDisplay = () => {
+
+function updateGunDisplay() {
     const weaponList = weaponType[currentIndex];
-    document.querySelectorAll('.gun-name').forEach(element => {
-        element.textContent = weaponList.name;
-    });
-    document.getElementById('gunPhoto').src = weaponList.imagePath;
-    document.getElementById('length').textContent = weaponList.length;
-    document.getElementById('barrelLength').textContent = weaponList.barrelLength;
-    document.getElementById('rateOfFire').textContent = weaponList.rateOfFire;
-    document.getElementById('effectiveRange').textContent = weaponList.effectiveRange;
-    document.getElementById('mass').textContent = weaponList.weight;
-    document.getElementById('caliber').textContent = weaponList.caliber;
-};
+
+    gunImageElement.classList.add('fade-out');
+
+   setTimeout(() => {
+        gunImageElement.src = weaponList.imagePath;
+        document.querySelectorAll('.gun-name').forEach(element => {
+            element.textContent = weaponList.name;
+        });
+        document.getElementById('length').textContent = weaponList.length;
+        document.getElementById('barrelLength').textContent = weaponList.barrelLength;
+        document.getElementById('rateOfFire').textContent = weaponList.rateOfFire;
+        document.getElementById('effectiveRange').textContent = weaponList.effectiveRange;
+        document.getElementById('mass').textContent = weaponList.weight;
+        document.getElementById('caliber').textContent = weaponList.caliber;
+
+        gunImageElement.classList.remove('fade-out');
+        gunImageElement.classList.add('fade-in');
+
+        setTimeout(() => {
+            gunImageElement.classList.remove('fade-in');
+        }, 500); 
+    }, 500); 
+}
 
 document.getElementById('prevGunBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + weaponType.length) % weaponType.length;
