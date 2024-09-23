@@ -40,8 +40,24 @@
             <button class="button button__right" id="nextGunBtn"></button>
         </div>
         <div class="gun-container">
-            <p class="gun-name" id="gunNameDisplay">AK-47</p>
-            <img src="images/ak_47.png" alt="gun photo" class="gun-image" id="gunPhoto">
+            <div class="gun-visual">
+                <p class="gun-name gun-name__" id="gunNameDisplay">AK-47</p>
+                <img src="images/ak_47.png" alt="gun photo" class="gun-image" id="gunPhoto">
+            </div>
+            <div class="gun-story">
+                <div class="story">
+                    <h1 id="story-label">Story</h1>
+                    <p id="story">The sniper rifle was created by American Ronnie Barrett. Having no relevant education or
+                        experience in weapons production, he managed to design and manufacture the first working samples
+                        in his garage in 1980. To mass-produce this rifle, its author set up his own company, called
+                        Barrett Firearms Manufacturing. After being rejected by leading arms companies such as
+                        Winchester and Fabrique National, he began small-scale assembly for the US domestic market. In
+                        1986, he founded Barrett Firearms, which began mass production of the Barrett M82A1 rifle. In
+                        1987, Barrett received a patent for his invention. In 1989, the Swedish army purchased 100
+                        Barrett M82A1 rifles, and during operations Desert Storm and Desert Shield, several hundred
+                        rifles were purchased by the US Army.
+                </div>
+            </div>
         </div>
         <div class="gun-characteristics-container">
             <h1 class="characteristics-header">Characteristics</h1>
@@ -49,8 +65,8 @@
                 <div class="gun-characteristics-group">
                     <div class="gun-characteristics-names">
                         <ul class="list-col">
-                            <li>Length:</li>
-                            <li>Barrel length:</li>
+                            <li id="length-label">Length:</li>
+                            <li id="barrelLength-label">Barrel length:</li>
                         </ul>
                     </div>
                     <div class="gun-characteristics-values">
@@ -63,8 +79,8 @@
                 <div class="gun-characteristics-group">
                     <div class="gun-characteristics-names">
                         <ul class="list-col">
-                            <li>Rate of fire:</li>
-                            <li>Effective firing range:</li>
+                            <li id="rateOfFire-label">Rate of fire:</li>
+                            <li id="effectiveRange-label">Effective firing range:</li>
                         </ul>
                     </div>
                     <div class="gun-characteristics-values">
@@ -77,8 +93,8 @@
                 <div class="gun-characteristics-group">
                     <div class="gun-characteristics-names">
                         <ul class="list-col">
-                            <li>Mass:</li>
-                            <li>Cartridge:</li>
+                            <li id="mass-label">Mass:</li>
+                            <li id="caliber-label">Caliber:</li>
                         </ul>
                     </div>
                     <div class="gun-characteristics-values">
@@ -93,4 +109,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

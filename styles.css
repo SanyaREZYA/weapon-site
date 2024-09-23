@@ -7,7 +7,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    font-family: 'Future PT', sans-serif; 
+    font-family: 'Future PT', sans-serif;
 }
 
 .side-panel {
@@ -27,9 +27,9 @@
     gap: 10px;
     width: 94%;
     height: 100%;
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
     background-image: url("images/content_bg_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo-container {
@@ -99,17 +99,71 @@
 .gun-container {
     width: 100%;
     height: 75%;
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
-.gun-container p {
+.gun-visual {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.gun-story {
+    width: 5%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.story {
+    margin-top: 100px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: 'Future PT', sans-serif;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.story h1 {
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.story p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.story:hover p {
+    max-height: 500px;
+}
+
+.gun-name__ {
     margin: 0;
-    position: relative; 
+    position: relative;
     z-index: 0;
     font-size: 300px;
     color: rgba(255, 255, 255, 0.5);
     font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+.gun-name__fix {
+    font-size: 220px;
 }
 
 .gun-image {
