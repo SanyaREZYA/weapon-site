@@ -1,6 +1,10 @@
 :root {
     --side-menu-bg: #3E4046;
     --side-menu-bg-hover: #303236;
+    --font-color: #FFFFFF;
+    --header-with-transparency: rgba(255, 255, 255, 0.5);
+    --half-transparency-bg: rgba(0, 0, 0, 0.5);
+    --transparency-bg: rgba(0, 0, 0, 0);
 }
 
 .body {
@@ -42,10 +46,11 @@
 
 .menu-hr {
     width: 100%;
-    border: 2px;
-    color: #FFFFFF;
+    height: 2px;
+    border: none;
     background-color: #FFFFFF;
 }
+
 
 .weapon-types-list-container {
     width: 100%;
@@ -72,7 +77,7 @@
 
 .change-gun-container {
     display: flex;
-    color: white;
+    color: var(--font-color);
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -123,7 +128,7 @@
 .story {
     margin-top: 100px;
     padding: 20px;
-    color: #FFFFFF;
+    color: var(--font-color);
     font-size: 20px;
     font-family: 'Future PT', sans-serif;
     height: auto;
@@ -137,7 +142,7 @@
 
 .story h1 {
     font-size: 36px;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--header-with-transparency);
     font-weight: bolder;
     cursor: pointer;
 }
@@ -157,7 +162,7 @@
     position: relative;
     z-index: 0;
     font-size: 300px;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--header-with-transparency);
     font-weight: bolder;
     transition: all 0.5s ease;
 }
@@ -191,7 +196,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    color: white;
+    color: var(--font-color);
 }
 
 .characteristics-header {

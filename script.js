@@ -234,13 +234,13 @@ storyElement.addEventListener('mouseover', () => {
     gunStoryElement.style.width = '25%';
     gunImageElement.style.left = '40%';
     gunImageElement.style.transition = 'all 0.5s ease-in-out';
-    document.querySelector('.story').style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    document.querySelector('.story').style.backgroundColor = "var(--half-transparency-bg)";
 });
 
 storyElement.addEventListener('mouseout', () => {
     gunStoryElement.style.width = '5%';
     gunImageElement.style.left = '50%';
-    document.querySelector('.story').style.backgroundColor = "rgba(0, 0, 0, 0)";
+    document.querySelector('.story').style.backgroundColor = "var(--transparency-bg)";
 });
 
 updateGunDisplay();
